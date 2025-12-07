@@ -53,6 +53,16 @@ The file of "*./code/split_review_data.py*" splits the whole dataset from **Step
 
 ### Step 6 : "Review-to-Needs" Transformation
 
+## Processed data
+
+### Car seat
+
+There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, **Installation Type**, **Harness Type**, **Material**.
+
+||Seat Type|Weight Range|Installation Type|Harness Type|Material|
+|---|---|---|---|---|---|
+|class number|5|8|5|4|6|
+
 # Progress Record
 
 **2025.12** Develop the data processing framework for adaptation of UCSD review dataset to configurable product recommendation.
