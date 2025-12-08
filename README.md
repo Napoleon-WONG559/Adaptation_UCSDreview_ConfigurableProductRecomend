@@ -53,6 +53,8 @@ The file of "*./code/split_review_data.py*" splits the whole dataset from **Step
 
 ### Step 6 : "Review-to-Needs" Transformation
 
+The file of "*./code/review_to_needs_transform_update.py*" transforms the review text into the needs text through intructing LLM by prompting.
+
 ## Processed data
 
 ### Car seat
