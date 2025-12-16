@@ -148,6 +148,8 @@ Furthermore, we found that several data samples with the same needs text have di
 
 **Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, although many data samples have different label annotations, but the needs text of these samples revolves around some common points.
 
+In this case, it is unlikely for the model to learn effectively because the learning signals are not consistent. Moreover, even the model has learned from the data, it can be useless to make prediction based on the learned parameters since the similar/same needs text data may correspond to a completely different label annotattion set.
+
 This makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
 
 # Progress Record
