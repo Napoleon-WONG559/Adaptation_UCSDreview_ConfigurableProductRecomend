@@ -65,6 +65,90 @@ There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, *
 |---|---|---|---|---|---|
 |class number|5|8|5|4|6|
 
+# Result
+
+## Car seat
+||Seat Type|Weight Range|Installation Type|Harness Type|Material|
+|---|---|---|---|---|---|
+|Accuracy|5|8|5|4|6|
+
+### Breakdown of car seat attribute
+
+#### Attribute 1: seat type
+
+||0|1|2|3|4|
+|---|---|---|---|---|---|
+|sample number|852|934|654|69|491|
+
+#### Attribute 2: weight range
+
+||0|1|2|3|4|5|6|7|
+|---|---|---|---|---|---|---|---|---|
+|sample number|75|49|118|809|1435|330|3|181|
+
+#### Attribute 3: installation type
+
+||0|1|2|3|4|
+|---|---|---|---|---|---|
+|sample number|1879|775|28|104|214|
+
+#### Attribute 4: harness type
+
+||0|1|2|3|
+|---|---|---|---|---|
+|sample number|1798|732|464|6|
+
+#### Attribute 5: material
+
+||0|1|2|3|4|5|
+|---|---|---|---|---|---|---|
+|sample number|944|372|314|820|37|513|
+
+### Conclusion from the breakdown
+
+**Conclusion**: The more dispersed the label distribution, namely the more difficult the attribute task, the worse the performance.
+
+### Analysis of the conclusion
+
+We found that the performance relates to the dispersal degree of label distribution, which is equivalent to the difficulty of the attribute task. Below is the analysis of this conclusion.
+
+One of the possible reasons is that the customer needs text data samples are similar in semantics. We notice that many needs text revolves around some common points, but has very different labels.
+
+For example, we show some needs text and their labels below:
+
+|Needs|attr1|attr2|attr3|attr4|attr5|
+|---|---|---|---|---|---|
+|"I need a product that consistently performs well without any issues."|4|4|1|1|0|
+|"I need a product that consistently meets my expectations without any flaws."|2|4|0|0|1|
+|"I need a product that consistently meets my expectations and brings me joy."|2|3|0|0|3|
+|"I need products to consistently meet my expectations, arriving on time or even early, and in perfect condition to ensure the recipient's delight."|1|4|1|1|5|
+|"I need products that consistently deliver excellent quality and exceed my expectations."|4|4|0|0|2|
+|"I need products that consistently deliver outstanding quality and exceed my expectations."|1|4|1|0|3|
+
+We check the original review text that corresponds to these needs text as below:
+
+|Needs|Review|
+|---|---|
+|"I need a product that consistently performs well without any issues."|"Works great!"|
+|"I need a product that consistently meets my expectations without any flaws."|"Perfect"|
+|"I need a product that consistently meets my expectations and brings me joy."|"Love it!!"|
+|"I need products to consistently meet my expectations, arriving on time or even early, and in perfect condition to ensure the recipient's delight."|"Product was as expected arrived a day early in great condition. Grandson loves it."|
+|"I need products that consistently deliver excellent quality and exceed my expectations."|"Great"|
+|"I need products that consistently deliver outstanding quality and exceed my expectations."|"Excellent"|
+
+Furthermore, we found that several data samples with the same needs text have different label annotation.
+
+|Needs|Review|attr1|attr2|attr3|attr4|attr5|
+|---|---|---|---|---|---|---|
+|I need a product that consistently meets my expectations without any flaws.|Perfect|2|4|0|0|1|
+|I need a product that consistently meets my expectations without any flaws.|Perfect|2|3|0|0|3|
+|I need a product that consistently meets my expectations without any flaws.|Perfect|0|5|0|0|0|
+|I need a product that consistently meets my expectations without any flaws.|Perfect|1|4|1|1|0|
+
+**Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, many data samples have different label annotations, but the needs text of these samples revolves around some common points.
+
+This makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
+
 # Progress Record
 
 **2025.12** Develop the data processing framework for adaptation of UCSD review dataset to configurable product recommendation.
