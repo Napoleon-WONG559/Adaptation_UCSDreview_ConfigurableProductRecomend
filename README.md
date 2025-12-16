@@ -113,7 +113,7 @@ There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, *
 
 We found that the performance relates to the dispersal degree of label distribution, which is equivalent to the difficulty of the attribute task. Below is the analysis of this conclusion.
 
-One of the possible reasons is that the customer needs text data samples are similar in semantics. We notice that many needs text revolves around some common points, but has very different labels.
+One of the reasons is that the customer needs text data samples are similar in semantics. We notice that many needs text revolves around some common points, but has very different labels, which implies inconsistency in dataset.
 
 For example, we show some needs text and their labels below:
 
@@ -137,7 +137,7 @@ We check the original review text that corresponds to these needs text as below:
 |"I need products that consistently deliver excellent quality and exceed my expectations."|"Great"|
 |"I need products that consistently deliver outstanding quality and exceed my expectations."|"Excellent"|
 
-Furthermore, we found that several data samples with the same needs text have different label annotation.
+Furthermore, we found that several data samples with the same needs text have different label annotation. This is directly threatening data consistency for model learning.
 
 |Needs|Review|attr1|attr2|attr3|attr4|attr5|
 |---|---|---|---|---|---|---|
@@ -146,11 +146,13 @@ Furthermore, we found that several data samples with the same needs text have di
 |I need a product that consistently meets my expectations without any flaws.|Perfect|0|5|0|0|0|
 |I need a product that consistently meets my expectations without any flaws.|Perfect|1|4|1|1|0|
 
-**Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, although many data samples have different label annotations, but the needs text of these samples revolves around some common points.
+**Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, although many data samples have different label annotations, but the needs text of these samples revolves around some common points, incurring **inconsistency** which prevents model from effectively learning.
 
-In this case, it is unlikely for the model to learn effectively because the learning signals are not consistent. Moreover, even the model has learned from the data, it can be useless to make prediction based on the learned parameters since the similar/same needs text data may correspond to a completely different label annotattion set.
+In this case, it is unlikely for the model to learn effectively because the learning signals are not consistent. Moreover, even the model has learned from the data in the finetuning set, it can be useless to make prediction for test set based on the learned parameters since the similar/same needs text data may correspond to a completely different label annotattion set.
 
 This makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
+
+**Conclusion**: In summary, the current synthesis method for needs text will lead to *inconsistency* in needs text dataset. The inconsistency in needs text dataset will prevent model from effectively learning. Furthermore, the inconsistency makes the testing result meaningless because the testing result doesn't reflect how well the model has learned (The reason is the data in testing set may contain a similar needs text in finetuning set, but a completely different label from the one in finetuning set).
 
 # Progress Record
 
