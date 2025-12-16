@@ -146,7 +146,7 @@ Furthermore, we found that several data samples with the same needs text have di
 |I need a product that consistently meets my expectations without any flaws.|Perfect|0|5|0|0|0|
 |I need a product that consistently meets my expectations without any flaws.|Perfect|1|4|1|1|0|
 
-**Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, many data samples have different label annotations, but the needs text of these samples revolves around some common points.
+**Analysis insight**: In this case, we realize that *directly transforming review text into needs text* can cause a problem. The problem is the generated needs text will become very similar in semantics. In addition, although many data samples have different label annotations, but the needs text of these samples revolves around some common points.
 
 This makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
 
