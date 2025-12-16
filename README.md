@@ -153,3 +153,7 @@ This makes distinguishing the needs text challenging and furthermore, makes *cla
 # Progress Record
 
 **2025.12** Develop the data processing framework for adaptation of UCSD review dataset to configurable product recommendation.
+
+**2025.12** Synthsize 3000 customer needs text data for car seat product based on customer review data. Adopt 1500:1500 data for finetuning and test respectively. Finetune Llama-3.2-3B model on car seat dataset.
+
+**2025.12** The results of attribute *seat type* and *material* are obviously lower than the other three attributes. We investigate the reason from the generated needs text data and record the analysis insights in this document. The conclusion is: *directly transforming review text into needs text* makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
