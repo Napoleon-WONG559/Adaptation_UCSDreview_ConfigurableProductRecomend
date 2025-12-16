@@ -68,37 +68,38 @@ There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, *
 # Result
 
 ## Car seat
-||Seat Type|Weight Range|Installation Type|Harness Type|Material|
+|Accuracy|Seat Type|Weight Range|Installation Type|Harness Type|Material|
 |---|---|---|---|---|---|
-|Accuracy|5|8|5|4|6|
+|LoRA|38.4|51.5|66.5|64.0|35.2|
+|LoRA + soft ensemble|39.4|51.8|67.2|65.8|36.3|
 
 ### Breakdown of car seat attribute
 
-#### Attribute 1: seat type
+#### Attribute 1: seat type: *39.4%*
 
 ||0|1|2|3|4|
 |---|---|---|---|---|---|
 |sample number|852|934|654|69|491|
 
-#### Attribute 2: weight range
+#### Attribute 2: weight range: *51.8%*
 
 ||0|1|2|3|4|5|6|7|
 |---|---|---|---|---|---|---|---|---|
 |sample number|75|49|118|809|1435|330|3|181|
 
-#### Attribute 3: installation type
+#### Attribute 3: installation type: *67.2%*
 
 ||0|1|2|3|4|
 |---|---|---|---|---|---|
 |sample number|1879|775|28|104|214|
 
-#### Attribute 4: harness type
+#### Attribute 4: harness type: *65.8%*
 
 ||0|1|2|3|
 |---|---|---|---|---|
 |sample number|1798|732|464|6|
 
-#### Attribute 5: material
+#### Attribute 5: material: *36.3%*
 
 ||0|1|2|3|4|5|
 |---|---|---|---|---|---|---|
