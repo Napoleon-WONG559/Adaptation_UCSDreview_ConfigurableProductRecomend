@@ -109,7 +109,7 @@ There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, *
 
 **Conclusion**: The more dispersed the label distribution, namely the more difficult the attribute task, the worse the performance.
 
-### Analysis of the conclusion
+### Investigation & Analysis
 
 We found that the performance relates to the dispersal degree of label distribution, which is equivalent to the difficulty of the attribute task. Below is the analysis of this conclusion.
 
