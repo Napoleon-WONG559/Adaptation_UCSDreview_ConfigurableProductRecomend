@@ -107,7 +107,10 @@ We notice that the largest proportion corresponds to Seat Type and the smallest 
 
 However, the occurence times of attribute-related information can explain the **trend** of the performance to some extent, but cannot explain **absolute performance**. Actually, that is because the data inconsistency is not completely eliminated. The reasons found include:
 - the relevant information is vague and unclear. (For Weight Range, Material)
+- - Weight Range: "2-year-old child"
+- - Material: "comfortable"
 - the relevant information is similar and undistinguishable. (For Seat Type, Material)
+- - Material: "comfortable"
 - lack of relevant information. (For Weight Range, Harness Type and Material)
 - the relevant information may contradict with the corresponding label. (For Seat Type, Material)
 - the task(attribute) itself is undistinguishable from review text. (For Material)
