@@ -116,3 +116,25 @@ However, the occurence times of attribute-related information can explain the **
 - the task(attribute) itself is undistinguishable from review text. (For Material)
 
 **Conclusion**: In summary, data inconsistency is merely alleviated to some extent via new synthesis method. Actually, data inconsistency still exists in the synthesized needs text dataset and cannot be eliminated completely. In this case, trade-off between data inconsistency and the attribute task performance becomes important, since the complete elimination of data inconsistency is very difficult or even impossible. Therefore, our goal is to alleviate the data inconsistency as much as possible until the attribute task performance is satisfactory.
+
+### Updated results after merging classes for *Weight Range* attribute
+
+Original class number for *Weight Range* attribute: 8 classes.
+
+After merging, class number for *Weight Range* attribute: 3 classes.
+
+Below is the updated results after merging:
+
+|LoRA|original|updated|
+|---|---|---|
+|Seat Type|42.3|42.2|
+|Weight Range|42.9|60.2|
+|Installation Type|69.1|68.8|
+|Harness Type|69.9|70.0|
+
+|LoRA+ensemble|original|updated|
+|---|---|---|
+|Seat Type|44.6|44.0|
+|Weight Range|43.2|61.2|
+|Installation Type|69.2|69.5|
+|Harness Type|70.0|70.7|
