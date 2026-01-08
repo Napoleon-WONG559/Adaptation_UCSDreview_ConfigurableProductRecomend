@@ -16,7 +16,7 @@ MODEL_NAME = "deepseek-chat"
 SLEEP_SECONDS = 0.1
 
 #client = OpenAI(api_key="YOUR_API_KEY")
-client = OpenAI(api_key="sk-089c25df7bec40f2a83a377aa243af74",\
+client = OpenAI(api_key="",\
     base_url="https://api.deepseek.com",)
 
 # -----------------------------
