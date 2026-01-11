@@ -63,7 +63,17 @@ There are 5 attributes for car seat. They are **Seat Type**, **Weight Range**, *
 
 ||Seat Type|Weight Range|Installation Type|Harness Type|Material|
 |---|---|---|---|---|---|
-|class number|5|8|5|4|6|
+|class number|5|3|5|4|6|
+
+### Bike
+
+There are 7 attributes for bike product. They are **Bike Type**, **Age Range**, **Wheel Size**, **Number of Speeds**, **Brake Style**, **Frame Material**, **Suspension Type**.
+
+||Bike Type|Age Range|Wheel Size|Number of Speeds|Brake Style|Frame Material|Suspension Type|
+|---|---|---|---|---|---|---|---|
+|class number|4|4|4|5|4|4|3|
+
+Based on our previous experience and insights gained from experiments in car seat product, we limited the class number for each attribute task under no more than 5 classes. Below is the label distribution for each attribute task.
 
 # Result
 
@@ -161,3 +171,11 @@ This makes distinguishing the needs text challenging and furthermore, makes *cla
 **2025.12** Synthsize 3000 customer needs text data for car seat product based on customer review data. Adopt 1500:1500 data for finetuning and test respectively. Finetune Llama-3.2-3B model on car seat dataset.
 
 **2025.12** The results of attribute *seat type* and *material* are obviously lower than the other three attributes. We investigate the reason from the generated needs text data and record the analysis insights in this document. The conclusion is: *directly transforming review text into needs text* makes distinguishing the needs text challenging and furthermore, makes *classifying the non-distinguishable needs text into correct attribute specification* very difficult.
+
+**2025.12** Due to the inconsistency issue occurred during data processing, we propose a new synthesis method to deal with the problem of inconsistency. The design of the new synthesis method is recorded and documented in the "*README.md*" under the directory of "*new_synthesis_needs*".
+
+**2025.12** With the new synthesis method for needs generation, we re-generate the customer needs for car seat product. We run experiments on the newly generated datasets. The experiment results show that the new synthesis method can merely alleviate the inconsistency issue to some extent for some attributes, but cannot entirely solve the inconsistency problem. In this case, we still obtain improvement in overall performance.
+
+**2026.1** To further improve the performance of attribute task of *Weight Range*, we merge the classes in *Weight Range* for car seat product. The class number is reduced from 8 to 3. The merge of classes significantly improved the performance of *Weight Range*, while keeping the other attributes' performance unchange.
+
+**2026.1** Process the data of bike product. The bike product has totally 7 attribute tasks. We adopt the new synthesis method to extract the relevant information in the review text data and leverage LLM to generate the customer needs text based on the relevant information.
