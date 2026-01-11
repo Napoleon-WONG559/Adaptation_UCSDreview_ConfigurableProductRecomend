@@ -75,6 +75,34 @@ There are 7 attributes for bike product. They are **Bike Type**, **Age Range**, 
 
 Based on our previous experience and insights gained from experiments in car seat product, we limited the class number for each attribute task under no more than 5 classes. Below is the label distribution for each attribute task.
 
+|Bike Type distribution|0|1|2|3|
+|---|---|---|---|---|
+|sample number|730|722|744|767|
+
+|Age Range distribution|0|1|2|3|
+|---|---|---|---|---|
+|sample number|407|397|213|1946|
+
+|Wheel Size distribution|0|1|2|3|
+|---|---|---|---|---|
+|sample number|615|655|1449|244|
+
+|Number of Speeds distribution|0|1|2|3|4|
+|---|---|---|---|---|---|
+|sample number|1023|111|616|32|1181|
+
+|Brake Style distribution|0|1|2|3|
+|---|---|---|---|---|
+|sample number|783|714|229|1237|
+
+|Frame Material distribution|0|1|2|3|
+|---|---|---|---|---|
+|sample number|1246|1533|27|157|
+
+|Suspension Type distribution|0|1|2|
+|---|---|---|---|
+|sample number|855|726|1382|
+
 # Result
 
 ## Car seat
