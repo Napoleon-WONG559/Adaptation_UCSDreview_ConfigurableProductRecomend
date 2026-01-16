@@ -192,6 +192,12 @@ This makes distinguishing the needs text challenging and furthermore, makes *cla
 
 **Conclusion**: In summary, the current synthesis method for needs text will lead to *inconsistency* in needs text dataset. The inconsistency in needs text dataset will prevent model from effectively learning. Furthermore, the inconsistency makes the testing result meaningless because the testing result doesn't reflect how well the model has learned (The reason is the data in testing set may contain a similar needs text in finetuning set, but a completely different label from the one in finetuning set).
 
+## Bike
+|model(Llama 3B)|Bike Type|Age Range|Wheel Size|Number of Speeds|Brake Style|Frame Material|Suspension Type|
+|---|---|---|---|---|---|---|---|
+|LoRA|58.6|77.7|66.5|59.7|55.2|70.3|51.6|
+|LoRA + soft ensemble|60.0|78.0|66.2|59.8|55.1|70.7|53.4|
+
 # Progress Record
 
 **2025.12** Develop the data processing framework for adaptation of UCSD review dataset to configurable product recommendation.
