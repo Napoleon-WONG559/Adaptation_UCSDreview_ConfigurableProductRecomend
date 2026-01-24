@@ -133,7 +133,7 @@ The label distribution for each attribute is shown below:
 |---|---|---|---|
 |occurrence times of relevant information|680|521|2114|
 
-*Besides, the relevant information of Battery Life often contains "long batter life" merely or neutral description about charging frequency(e.g. once a week).*
+*Besides, the relevant information of Battery Life often contains "long battery life" merely or neutral description about charging frequency(e.g. once a week).*
 
 # Result
 
