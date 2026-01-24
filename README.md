@@ -103,6 +103,38 @@ Based on our previous experience and insights gained from experiments in car sea
 |---|---|---|---|
 |sample number|855|726|1382|
 
+### Smart watch
+
+There are 3 attributes for smart watch product. They are **Screen Size**, **Display Type**, **Battery Life**.
+
+The other 3 information(**Special Features**, **Waterproof Rating**, **Target Audience**) in the dataset is not appropriate for the configuration task. The **Special Features** contains only free text without clustering pattern, the **Waterproof Rating** concentrates almost all samples in one class, and the **Target Audience** itself is not a configurable attribute.
+
+||Screen Size|Display Type|Battery Life|
+|---|---|---|---|
+|class number|3|3|2|
+
+The label distribution for each attribute is shown below:
+
+|Screen Size distribution|0|1|2|
+|---|---|---|---|
+|sample number|710|1072|620|
+
+|Display Type distribution|0|1|2|
+|---|---|---|---|
+|sample number|375|1088|939|
+
+|Battery Life distribution|0|1|
+|---|---|---|
+|sample number|784|1618|
+
+*Note: The data inconsistency issue exists in the dataset of the smart watch. Below is the relevant information occurrence times for each attribute.*
+
+||Screen Size|Display Type|Battery Life|
+|---|---|---|---|
+|occurrence times of relevant information|680|521|2114|
+
+*Besides, the relevant information of Battery Life often contains "long batter life" merely or neutral description about charging frequency(e.g. once a week).*
+
 # Result
 
 ## Car seat
@@ -197,6 +229,14 @@ This makes distinguishing the needs text challenging and furthermore, makes *cla
 |---|---|---|---|---|---|---|---|
 |LoRA|58.6|77.7|66.5|59.7|55.2|70.3|51.6|
 |LoRA + soft ensemble|60.0|78.0|66.2|59.8|55.1|70.7|53.4|
+
+## Smart watch
+
+|model(Llama 3B)|Screen Size|Display Type|Battery Life|
+|---|---|---|---|
+|LoRA|43.1|46.4|66.7|
+|LoRA + soft ensemble|44.2|47.5|66.8|
+
 
 # Progress Record
 
