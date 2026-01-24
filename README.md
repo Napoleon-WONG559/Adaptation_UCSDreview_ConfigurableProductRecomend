@@ -253,3 +253,9 @@ This makes distinguishing the needs text challenging and furthermore, makes *cla
 **2026.1** To further improve the performance of attribute task of *Weight Range*, we merge the classes in *Weight Range* for car seat product. The class number is reduced from 8 to 3. The merge of classes significantly improved the performance of *Weight Range*, while keeping the other attributes' performance unchange.
 
 **2026.1** Process the data of bike product. The bike product has totally 7 attribute tasks. We adopt the new synthesis method to extract the relevant information in the review text data and leverage LLM to generate the customer needs text based on the relevant information.
+
+**2026.1** Conduct experiments on the dataset of bike product. The experiment results of 7 attributes all exceed 50% in accuracy.
+
+**2026.1** Process the data of smart watch with the new synthesis method. We adopt 3 attribute tasks as configurable attributes while the remaining information is not appropriate for configuration. Details can be referred above. We also detect there exists data inconsistency issue in the dataset of smart watch.
+
+**2026.1** Conduct experiments on the dataset of smart watch. The experiment results of 2 attributes exceed 40% and the remaining one exceeds 60%.
