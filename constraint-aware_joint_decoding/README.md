@@ -126,7 +126,7 @@ GPU = High
 
 #### 2.3.2 Joint scoring
 
-**Configuration A (independent decoding result)**
+**Configuration A (independent decoding result: incompatible)**
 
 ```
 High CPU, 16GB RAM, High GPU
@@ -138,7 +138,7 @@ Compatibility = −1.2 − 1.0 = −2.2
 Total = −0.45 + λ(−2.2) = −2.65   (λ = 1)
 ```
 
-**Configuration B (balanced alternative)**
+**Configuration B (balanced alternative: compatible)**
 
 ```
 High CPU, 32GB RAM, High GPU
